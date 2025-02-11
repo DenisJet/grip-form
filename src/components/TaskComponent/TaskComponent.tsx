@@ -63,7 +63,12 @@ function TaskComponent() {
                 <span className="font-semibold">All auto responses:</span>{" "}
                 {`${data.task.all_auto_responses}`}
               </p>
-              <Card size="small" title="Rules:" style={{ width: 300 }}>
+              <Card
+                size="small"
+                variant="borderless"
+                title="Rules:"
+                style={{ width: 300 }}
+              >
                 <p>
                   <span className="font-semibold">Budget from:</span>{" "}
                   {data.task.rules.budget_from}

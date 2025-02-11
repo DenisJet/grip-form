@@ -47,6 +47,10 @@ export const useTaskData = (): UseTaskResult => {
 
         const data = await response.json();
         setData(data);
+
+        const token = new URL(API_TASK_URL).searchParams.get("token");
+        if (token) localStorage.setItem("token", token);
+        document.cookie = `token=${token}`;
       } catch (error) {
         setError(`Ошибка при получении данных: ${error}`);
       } finally {
